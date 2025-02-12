@@ -1,0 +1,29 @@
+@use '../common/mixins' as *;
+.modal-win {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color);
+
+    border-radius: 5px;
+
+    gap: 20px;
+
+    .win-title,
+    .win-time, 
+    .game-btn-title {
+        @include fontStyle (18px, 600, 1px, var(--font-color))
+    }
+    .game-btn-title {
+        cursor: pointer;
+    }
+
+}
+
+

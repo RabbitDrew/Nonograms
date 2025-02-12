@@ -1,0 +1,46 @@
+@media screen and (max-width: 1120px) {
+  .main-page-content__wrapper {
+    flex-direction: column;
+  }
+
+  .content-game-interface {
+    align-items: center;
+  }
+  .interface-btn {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .hint-cell,
+  .grid-cell {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .hint-cell,
+  .grid-cell {
+    width: 25px;
+    height: 25px;
+  }
+
+  .interface-btn-title {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .page-main {
+    padding: 20px 8px 30px 8px !important;
+  }
+  .hint-cell,
+  .grid-cell {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+

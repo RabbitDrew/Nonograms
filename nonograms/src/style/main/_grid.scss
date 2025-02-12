@@ -1,0 +1,108 @@
+@use "../common/mixins" as *;
+
+.content-nongrams-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+//top block
+.grid-top__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  .top-game-theme {
+    //width: 82px; //addopt size through js
+    //height: 81px; //adopt size through js
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    background-color: var(--grid-bg-color);
+    .game-theme-title {
+      @include fontStyle(15px, 400, 1px, var(--font-color));
+    }
+  }
+
+  .top-hints {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    .hints-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+  }
+}
+
+//bottom block
+.grid-bottom__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  gap: 2px;
+
+  .bottom-hints {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    .hints-coll {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+  }
+
+  .bottom-gmae-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+
+    .grid-game-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+  }
+}
+
+.hint-cell,
+.grid-cell {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background-color: var(--grid-bg-color);
+
+  .cell-title {
+    @include fontStyle(18px, 600, 1px, var(--font-color));
+  }
+}
+
+
+.grid-cell:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}

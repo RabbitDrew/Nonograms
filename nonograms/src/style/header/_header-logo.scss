@@ -1,0 +1,5 @@
+@use '../common/mixins.scss' as *;
+
+.logo-title {
+    @include fontStyle(36px, 600, 1px,var(--font-color))
+}

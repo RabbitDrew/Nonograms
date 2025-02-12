@@ -1,0 +1,214 @@
+.content-nongrams-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.grid-top__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.grid-top__wrapper .top-game-theme {
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background-color: var(--grid-bg-color);
+}
+.grid-top__wrapper .top-game-theme .game-theme-title {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: var(--font-color);
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+.grid-top__wrapper .top-hints {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.grid-top__wrapper .top-hints .hints-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.grid-bottom__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2px;
+}
+.grid-bottom__wrapper .bottom-hints {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.grid-bottom__wrapper .bottom-hints .hints-coll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.grid-bottom__wrapper .bottom-gmae-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.grid-bottom__wrapper .bottom-gmae-grid .grid-game-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.hint-cell,
+.grid-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background-color: var(--grid-bg-color);
+}
+.hint-cell .cell-title,
+.grid-cell .cell-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: var(--font-color);
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+
+.grid-cell:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+.content-game-interface {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}
+.content-game-interface .interface-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  cursor: pointer;
+}
+.content-game-interface .interface-btn .interface-btn-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: var(--font-color);
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  transition: color 0.5s ease-in-out;
+}
+.content-game-interface .interface-btn:hover .interface-btn-title {
+  color: var(--hover-color);
+}
+
+@media screen and (max-width: 1120px) {
+  .main-page-content__wrapper {
+    flex-direction: column;
+  }
+  .content-game-interface {
+    align-items: center;
+  }
+  .interface-btn {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 930px) {
+  .hint-cell,
+  .grid-cell {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .hint-cell,
+  .grid-cell {
+    width: 25px;
+    height: 25px;
+  }
+  .interface-btn-title {
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page-main {
+    padding: 20px 8px 30px 8px !important;
+  }
+  .hint-cell,
+  .grid-cell {
+    width: 20px;
+    height: 20px;
+  }
+}
+.page-main {
+  max-width: 1440px;
+  min-width: 400px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 60px 40px 30px 40px;
+}
+.page-main .main-page-content__wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+.page-main .main-page-content__wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../assets/nonograms-bg.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+@use "../common/mixins" as *;
+@import './footer-media';
+
+.page-footer {
+    max-width: 1440px;
+    min-width:  320px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px 40px 40px;
+}
+
+g {
+    fill: var(--svg-color)
+}
+
+.year-title {
+    @include fontStyle(18px, 400, 1px, var(--font-color));
+}
+
+.school-img {
+    width: 50px;
+    height: 50px;
+}
