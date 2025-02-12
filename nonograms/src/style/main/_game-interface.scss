@@ -1,0 +1,29 @@
+@use "../common/mixins" as *;
+
+.content-game-interface {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  gap: 5px;
+
+  .interface-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    cursor: pointer;
+
+    .interface-btn-title {
+      @include fontStyle(18px, 600, 1px, var(--font-color));
+      transition: color 0.5s ease-in-out;
+    }
+  }
+
+  .interface-btn:hover .interface-btn-title {
+    color: var(--hover-color);
+  }
+}

@@ -1,0 +1,60 @@
+//to set whole size of window
+.page {
+  min-width: 460px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Sawarabi Gothic", serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--font-color);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  background-color: var(--bg-color);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  text-decoration: none;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+:root {
+  //colorway
+  --bg-color: #f3ece5;
+  --font-color: #413527;
+  --grid-bg-color : #ffffff95;
+  --border-color:  #413527;
+  --border-color: #413527;
+  --hover-color: #6f6f6f;
+  --dropdown-bg-color: #ffffffa9;
+  --svg-color: #413527;
+}

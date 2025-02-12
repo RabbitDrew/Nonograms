@@ -1,0 +1,56 @@
+@use "../common/mixins" as *;
+.modal-win {
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  background-color: var(--bg-color);
+
+  border-radius: 5px;
+
+  gap: 20px;
+
+  padding: 20px 0;
+  .modal-win-table-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+
+    .table-header-title {
+        @include fontStyle(18px, 600, 1px, var(--font-color));
+    }
+  }
+
+
+  .modal-win-rsult-list { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+    .modal-win-table-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        
+        .table-item-title {
+          @include fontStyle(18px, 400, 1px, var(--font-color));
+        }
+      }
+
+  }
+
+
+}

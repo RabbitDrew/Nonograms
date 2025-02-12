@@ -1,0 +1,47 @@
+@use './modal-win-result';
+@use './modal-win-table';
+
+.page-modal {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    background-color: rgba(129, 129, 129, 0.2);
+
+    animation: openModal .5s ease forwards;
+  
+}
+
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.modal--close {
+    animation: closeModal .5s ease forwards;
+}
+
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

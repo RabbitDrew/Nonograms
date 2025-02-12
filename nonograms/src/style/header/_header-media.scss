@@ -1,0 +1,30 @@
+@media screen and (max-width: 1024px) {
+  .page-header {
+    .header-logo {
+      flex: 1;
+    }
+    .header-nav {
+      display: none;
+    }
+    .header-adopt-menu-btn {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .page-header {
+    padding: 20px 8px 0 8px !important;
+  }
+
+  .logo-title {
+    font-size: 28px;
+  }
+  .timer-title {
+    font-size: 16px !important;
+  }
+
+  .mode-btn-title {
+    font-size: 16px !important;
+  }
+}

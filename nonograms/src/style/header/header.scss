@@ -1,0 +1,20 @@
+@import './header-logo';
+@import './header-nav';
+@import './header-timer';
+@import './header-mode-btn';
+@import './header-adopt-menu-style';
+@import './header-media';
+
+.page-header{
+    max-width: 1440px;
+    min-width: 320px;
+    width: 100%;
+
+    padding: 20px 40px 0 40px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+

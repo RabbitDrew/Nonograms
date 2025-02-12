@@ -1,0 +1,12 @@
+@use '../common/mixins.scss' as *;
+
+.header-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  .timer-title {
+    @include fontStyle(18px, 600, 1px, var(--font-color))
+  }
+}
