@@ -3,12 +3,15 @@ import levelSwitcher from "./1_0_level-switcher";
 import themeSwitcher from "./1_1_theme-switcher";
 import sizeFieldSwitcher from "./2_field-size-switcher";
 import gameGridCreator from "../../layout/2_1_main-grid-layout-creator";
-import createEmptyMatrix from "../decode/0_matrix-creator"; // ! check wheather i need this import or not
+
 import decipher from "../decode/1_decipher";
+
 //for reattaching the handlerы to update game field according new level and theme
 import attachEventListeners from "../game-grid-handler/0_cell-handler";
 
-// tempruary functions to validate prepeared answer with  answer that has been got from user
+
+
+//* tempruary functions to validate prepeared answer with  answer that has been got from user
 //temp func !!!
 import {
   findStartLevelTheme,
@@ -18,12 +21,16 @@ import {
 converCoordinates(); // conver cordinatest of answer matrix for start theme
 //----
 
+
+
+
 document.addEventListener("click", (event) => {
   if (event.target.closest(".difficulty-list-item-title")) {
     levelSwitcher(event);
-    sizeFieldSwitcher(event);
+    configGame.fieldSize = sizeFieldSwitcher(event);
     gameGridCreator(configGame.fieldSize, configGame.gameThemeObj);
-
+    
+  
     // temp func !!!
     findStartLevelTheme(event);
     converCoordinates();
@@ -33,7 +40,7 @@ document.addEventListener("click", (event) => {
   } else if (event.target.closest(".theme-list-item-title")) {
     themeSwitcher(event);
     gameGridCreator(configGame.fieldSize, configGame.gameThemeObj);
-    configGame.emptyMatrix = createEmptyMatrix(configGame.fieldSize);
+
     decipher();
 
     // temp func !!!
